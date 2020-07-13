@@ -96,7 +96,7 @@ Add repo with WP
 
         helm install wordpress bitnami/wordpress \
         --set mariadb.enabled=false \
-        --set externalDatabase.host=test-mysql.c39j6npahvpk.eu-central-1.rds.amazonaws.com \
+        --set externalDatabase.host=DATABASE_ENDPOINT_FROM_RDS_CONSOLE \
         --set externalDatabase.user=admin \
         --set externalDatabase.password="YourDbPassword" \
         --set externalDatabase.database=testwpdb \
