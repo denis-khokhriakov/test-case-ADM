@@ -1,0 +1,12 @@
+#Helm values file for installing cluster-autoscaler
+
+awsRegion: eu-central-1
+
+rbac:
+  create: true
+  serviceAccountAnnotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::<ACCOUNTID>:role/cluster-autoscaler"
+
+autoDiscovery:
+  clusterName: test-kubecluster
+  enabled: true
